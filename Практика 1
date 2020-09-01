@@ -1,0 +1,172 @@
+public class Ball
+{
+    private String type;
+    private String maker;
+    private String color;
+
+    public Ball(){}
+
+
+    public Ball(String type, String maker, String color)
+    {
+        this.type = type;
+        this.maker = maker;
+        this.color = color;
+    }
+
+    public void set_type(String type)
+    {
+        this.type = type;
+    }
+
+    public void set_maker(String maker)
+    {
+        this.maker = maker;
+    }
+
+    public void set_color(String color)
+    {
+        this.color = color;
+    }
+
+    public String get_type()
+    {
+        return this.type;
+    }
+
+    public String get_maker()
+    {
+        return this.maker;
+    }
+
+    public String get_color()
+    {
+        return this.color;
+    }
+
+    public void to_string()
+    {
+        System.out.println(this.type + " " + this.maker + " " + this.color);
+    }
+}
+
+public class Book
+{
+    String name;
+    String author;
+
+    public Book(){}
+
+
+    public Book(String name, String author)
+    {
+        this.name = name;
+        this.author = author;
+    }
+
+    public void set_name(String name)
+    {
+        this.name = name;
+    }
+
+    public void set_author(String author)
+    {
+        this.author = author;
+    }
+
+    String get_name()
+    {
+        return this.name;
+    }
+
+    String get_author()
+    {
+        return this.author;
+    }
+
+    public void to_string()
+    {
+        System.out.println(this.name + " " + this.author);
+    }
+}
+
+public class Dog
+{
+    private String color;
+    private String breed;
+    private String name;
+
+    public Dog(){}
+
+
+    public Dog(String color, String breed, String name)
+    {
+        this.color = color;
+        this.breed = breed;
+        this.name = name;
+    }
+    public void voice()
+    {
+        System.out.println("Гав!");
+    }
+
+    public void to_string()
+    {
+        System.out.println(this.color + " " + this.breed + " " + this.name);
+    }
+
+    void set_color(String color)
+    {
+        this.color = color;
+    }
+
+    void set_breed(String breed)
+    {
+        this.breed = breed;
+    }
+
+    void set_name(String name)
+    {
+        this.name = name;
+    }
+
+    String get_color()
+    {
+        return this.color;
+    }
+
+    String get_breed()
+    {
+        return this.breed;
+    }
+
+    String get_name()
+    {
+        return this.name;
+    }
+}
+
+class Test
+{
+    public static void main(String[] args)
+    {
+        Dog a = new Dog("Черный", "Дворняга", "Дина");
+        a.to_string();
+        a.voice();
+
+        Ball b = new Ball();
+
+        b.set_color("green");
+        b.set_maker("nike");
+        b.set_type("football");
+
+        b.to_string();
+
+        Book c = new Book("Война и мир", "Л.Толстой");
+        System.out.println(c.get_name() + " " + c.get_author());
+
+    }
+}
+
+
+
